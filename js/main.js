@@ -24,6 +24,12 @@ $(document).ready(function () {
         }
     });
 
-    AOS.init();
+    AOS.init({
+        startEvent: 'load'
+    });
+    
+    $(window).on('load', function() {
+        AOS.refresh();
+    });
 
 });
